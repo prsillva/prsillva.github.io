@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system para landing page de freelancer tech
+Cores: Azul profissional, Cinza elegante, Laranja vibrante
+Fonte: Inter do Google Fonts
+*/
+
+@layer base {
+  :root {
+    /* Sistema de cores profissional */
+    --background: 0 0% 100%;
+    --foreground: 222 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 15% 15%;
+
+    /* Azul profissional como cor principal */
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 221 83% 63%;
+    --primary-dark: 221 83% 43%;
+
+    /* Cinza elegante para elementos secundários */
+    --secondary: 220 13% 91%;
+    --secondary-foreground: 220 9% 46%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14% 96%;
+    --accent-foreground: 220 9% 39%;
+
+    /* Laranja vibrante para CTAs */
+    --cta: 20 91% 48%;
+    --cta-foreground: 0 0% 100%;
+    --cta-hover: 20 91% 42%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.75rem;
+
+    /* Gradientes elegantes */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-cta: linear-gradient(135deg, hsl(var(--cta)), hsl(20 91% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 53% / 0.05), hsl(20 91% 48% / 0.05));
+
+    /* Sombras profissionais */
+    --shadow-card: 0 4px 6px -1px hsl(220 13% 91% / 0.1), 0 2px 4px -1px hsl(220 13% 91% / 0.06);
+    --shadow-hover: 0 10px 15px -3px hsl(220 13% 91% / 0.1), 0 4px 6px -2px hsl(220 13% 91% / 0.05);
+    --shadow-cta: 0 4px 14px 0 hsl(var(--cta) / 0.25);
+
+    /* Animações suaves */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 222 47% 4%;
+    --foreground: 220 14% 96%;
+
+    --card: 222 47% 5%;
+    --card-foreground: 220 14% 96%;
+
+    --popover: 222 47% 5%;
+    --popover-foreground: 220 14% 96%;
+
+    --primary: 221 83% 63%;
+    --primary-foreground: 222 47% 4%;
+    --primary-light: 221 83% 73%;
+    --primary-dark: 221 83% 53%;
+
+    --secondary: 222 47% 8%;
+    --secondary-foreground: 220 14% 85%;
+
+    --muted: 222 47% 8%;
+    --muted-foreground: 220 14% 70%;
+
+    --accent: 222 47% 8%;
+    --accent-foreground: 220 14% 85%;
+
+    --cta: 20 91% 52%;
+    --cta-foreground: 0 0% 100%;
+    --cta-hover: 20 91% 46%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 220 14% 96%;
+
+    --border: 222 47% 8%;
+    --input: 222 47% 8%;
+    --ring: 221 83% 63%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-cta: linear-gradient(135deg, hsl(var(--cta)), hsl(20 91% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 63% / 0.1), hsl(20 91% 52% / 0.1));
+
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
+    --shadow-hover: 0 10px 15px -3px hsl(0 0% 0% / 0.2), 0 4px 6px -2px hsl(0 0% 0% / 0.1);
+    --shadow-cta: 0 4px 14px 0 hsl(var(--cta) / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent-foreground/30;
+  }
+}
